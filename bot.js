@@ -2,7 +2,8 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
-    console.log('I am ready!');
+    console.log("Connected as " + client.user.tag)
+    client.user.setActivity("over this server.", {type: "WATCHING"})
 });
 
 client.on('message', message => {
